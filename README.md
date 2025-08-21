@@ -1,43 +1,17 @@
 Objective:
-To predict whether the SpaceX Falcon 9 rocket’s first stage will successfully land, based on launch parameters such as payload mass, booster version, orbit type, and launch site.
+The goal of this project was to predict whether the SpaceX Falcon 9 rocket’s first stage would successfully land, based on parameters such as payload mass, booster version, orbit type, and launch site. This project was completed as part of the IBM Data Science Professional Certificate Capstone.
 
-Key Steps:
+Project Overview:
+The project began with data collection from the official SpaceX API, supplemented by web scraping for missing information. The collected data was cleaned to remove inconsistencies, handle missing values, normalize payload data, and encode categorical variables. Exploratory Data Analysis (EDA) was conducted to uncover patterns in launch success, such as bar charts showing landing success by site and booster version, scatter plots linking payload with orbit type, SQL queries to count success/failure outcomes and identify the first successful landing date (2015-12-22), and heatmaps to analyze correlations.
 
-Data Collection: Retrieved launch records from the SpaceX API
- and performed supplementary web scraping.
+Visualizations were extended with a Folium interactive map plotting launch and landing sites, as well as a Plotly Dash dashboard for dynamic filtering by site, payload, and booster version. For predictive modeling, multiple machine learning algorithms were trained, including Logistic Regression, SVM, Random Forest, and Gradient Boosting. Hyperparameters were tuned using GridSearchCV, and model performance was evaluated with accuracy, precision, recall, and F1-score.
 
-Data Wrangling: Cleaned inconsistencies, handled missing values, normalized payload data, and applied one-hot encoding to categorical features.
+Key Results:
 
-Exploratory Data Analysis (EDA):
+Random Forest and Gradient Boosting achieved the strongest predictive performance.
 
-Bar charts: landing success by site and booster version.
+Critical predictors of landing success were Payload Mass, Booster Version, and Orbit Type.
 
-Scatter plots: payload vs. orbit type.
+Insights provide value for mission planning, helping SpaceX reduce risk and optimize reusability strategies.
 
-SQL queries: success/failure counts, first successful landing date (2015-12-22).
-
-Heatmaps: feature correlation analysis.
-
-Visualization:
-
-Folium interactive map of launch & landing sites.
-
-Plotly Dash dashboard for interactive exploration (filters for site, payload, booster).
-
-Modeling:
-
-Trained Logistic Regression, SVM, Random Forest, and Gradient Boosting models.
-
-Optimized using GridSearchCV.
-
-Evaluated with accuracy, precision, recall, and F1-score.
-
-Results:
-
-Random Forest and Gradient Boosting performed best.
-
-Critical predictors: Payload Mass, Booster Version, Orbit Type.
-
-Insights help optimize SpaceX mission planning and reduce risk.
-
-Tech Stack: Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Folium, Plotly Dash, SQL.
+Tech Stack: Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Folium, Plotly Dash, SQL
